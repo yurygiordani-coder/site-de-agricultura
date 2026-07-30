@@ -1,62 +1,58 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. SIMULADOR DE ECONOMIA DE ÁGUA (Manejo inteligente)
-    const btnCalcular = document.getElementById('btnCalcular');
-    const inputHectares = document.getElementById('hectares');
-    const resultadoBox = document.getElementById('resultadoCalc');
-    
-    if (btnCalcular && inputHectares) {
-        btnCalcular.addEventListener('click', () => {
-            const hectares = parseFloat(inputHectares.value);
-            
-            if (isNaN(hectares) || hectares <= 0) {
-                alert('Por favor, insira uma quantidade de hectares válida.');
-                return;
+
+    // 1. CARREGAR A DATA DA SAFRA ATUALIZADA (Dinâmico)
+    const dateContainer = document.getElementById('currentDate');
+    if (dateContainer) {
+        const hoje = new Date();
+        const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        // Exibe formatado no padrão brasileiro (Ex: quinta-feira, 30 de julho de 2026)
+        dateContainer.textContent = hoje.toLocaleDateString('pt-BR', opcoes);
+    }
+
+    // 2. MENU MOBILE RESPONSIVO (Sanduíche)
+    const mobileMenu = document.getElementById('mobileMenu');
+    const navLinks = document.getElementById('navLinks');
+
+    if (mobileMenu && navLinks) {
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Altera o ícone entre barras e "X" de fechar
+            const icon = mobileMenu.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.className = 'fa-solid fa-xmark';
+            } else {
+                icon.className = 'fa-solid fa-bars';
             }
-            
-            // Regra matemática fictícia mas baseada em consumo médio:
-            // Um hectare consome cerca de 40.000 litros/dia dependendo da cultura.
-            // Economia média do gotejamento automatizado é de 40%.
-            const economiaPorHectareDIa = 16000; 
-            const totalEconomizado = hectares * economiaPorHectareDIa;
-            
-            // Atualiza o HTML com formatação de números local (Brasil)
-            document.getElementById('resAgua').textContent = totalEconomizado.toLocaleString('pt-BR');
-            document.getElementById('resEnergia').textContent = '35'; // Redução padrão de bombeamento
-            
-            // Mostra o quadro de resultados removendo a classe hidden
-            resultadoBox.classList.remove('hidden');
         });
     }
 
-    // 2. FORMULÁRIO DE CONTATO COM VALIDACÃO
-    const form = document.getElementById('agroForm');
-    
-    if (form) {
-        form.addEventListener('submit', function(e) {
+    // 3. ENVIO DO FORMULÁRIO COM SIMULAÇÃO DE BANCO DE DADOS
+    const techForm = document.getElementById('agroTechForm');
+    if (techForm) {
+        techForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             const nome = document.getElementById('nome').value.trim();
-            const email = document.getElementById('email').value.trim();
-            
-            alert(`Obrigado pelo interesse, ${nome}!\nNossos consultores agro técnicos entrarão em contato através do e-mail: ${email} nas próximas 24 horas.`);
+            const cultura = document.getElementById('cultura').value;
+
+            // Alerta personalizado de acordo com a cultura selecionada
+            alert(`Solicitação processada com sucesso, ${nome}!\nInstanciamos um modelo preditivo para sua cultura de ${cultura.toUpperCase()}. Um engenheiro entrará em contato.`);
             
             this.reset();
         });
     }
 
-    // 3. ANIMAÇÃO DE ROLAGEM DO CABEÇALHO (Sticky Scroll Effect)
-    const header = document.querySelector('header');
-    
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 80) {
-            header.style.padding = '10px 0';
-            header.style.backgroundColor = '#f1f8e9'; 
-            header.style.boxShadow = '0 5px 15px rgba(0,0,0,0.12)';
-        } else {
-            header.style.padding = '20px 0';
-            header.style.backgroundColor = '#ffffff';
-            header.style.boxShadow = '0 2px 5px rgba(0,0,0,0.08)';
-        }
-    });
+    // 4. ATUALIZADOR DINÂMICO DE DADOS DO DASHBOARD (Simulação de Sensores)
+    // Altera o valor da umidade do solo levemente a cada 5 segundos para simular telemetria real
+    const umidadeValor = document.querySelector('.dash-value');
+    const progressoPreenchimento = document.querySelector('.progress-fill');
+
+    if (umidadeValor && progressoPreenchimento) {
+        setInterval(() => {
+            // Gera oscilação realista entre 60% e 68%
+            const variacaoUmidade = Math.floor(Math.random() * (68 - 60 + 1)) + 60;
+            umidadeValor.textContent = `${variacaoUmidade}%`;
+            progressoPreenchimento.style.width = `${variacaoUmidade}%`;
+        }, 5000); 
+    }
 });
