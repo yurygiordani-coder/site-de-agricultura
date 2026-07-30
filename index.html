@@ -3,196 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroFuturo | Portal de Agricultura Avançada</title>
+    <title>AgroAI | Inteligência e Monitoramento de Precisão</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Ícones externos para um design profissional -->
+    <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
-    <!-- Cabeçalho e Menu -->
+    <!-- Topbar com Cotações -->
+    <div class="topbar">
+        <div class="container topbar-flex">
+            <div class="market-ticker">
+                <span class="ticker-item"><i class="fa-solid fa-chart-line text-success"></i> Soja: <strong>R$ 138,50</strong> (+1.2%)</span>
+                <span class="ticker-item"><i class="fa-solid fa-chart-line text-success"></i> Milho: <strong>R$ 58,20</strong> (+0.8%)</span>
+                <span class="ticker-item"><i class="fa-solid fa-chart-line text-danger"></i> Algodão: <strong>R$ 72,10</strong> (-0.3%)</span>
+            </div>
+            <div class="topbar-date" id="currentDate"></div>
+        </div>
+    </div>
+
+    <!-- Navegação -->
     <header>
         <div class="container header-flex">
             <div class="logo">
-                <h1>Agro<span>Futuro</span></h1>
+                <h1>Agro<span>AI</span></h1>
             </div>
             <nav>
-                <ul class="nav-links">
+                <ul class="nav-links" id="navLinks">
                     <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#tecnologias">Tecnologias</a></li>
-                    <li><a href="#calendario">Calendário</a></li>
-                    <li><a href="#calculadora">Simulador</a></li>
-                    <li><a href="#blog">Notícias</a></li>
-                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#dashboard">Painel Tech</a></li>
+                    <li><a href="#clima">Clima</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                    <li><a href="#contato">Falar com Consultor</a></li>
                 </ul>
+                <div class="menu-toggle" id="mobileMenu"><i class="fa-solid fa-bars"></i></div>
             </nav>
         </div>
     </header>
 
     <!-- Seção Hero -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <h2>O Futuro da Agricultura é Sustentável</h2>
-            <p>Unindo inteligência artificial, dados climáticos e respeito ao meio ambiente para alimentar o mundo de forma consciente.</p>
-            <a href="#tecnologias" class="btn">Explorar Inovações</a>
-        </div>
-    </section>
-
-    <!-- Seção de Dados e Números -->
-    <section class="bg-dark text-white section-padding">
-        <div class="container grid-4 text-center">
-            <div class="stat-item">
-                <span class="stat-number">+40%</span>
-                <p>De eficiência no uso de recursos hídricos</p>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">25t</span>
-                <p>Evitadas de CO₂ com manejo biológico</p>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">100%</span>
-                <p>Rastreabilidade do campo à mesa</p>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">+15k</span>
-                <p>Hectares monitorados por nossa tecnologia</p>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="badge">Agricultura 5.0</span>
+            <h2>Decisões Baseadas em Dados, Colheitas Recordes.</h2>
+            <p>Monitore suas lavouras por satélite, automatize sua irrigação e reduza custos operacionais em até 35% com nosso ecossistema integrado.</p>
+            <div class="hero-buttons">
+                <a href="#dashboard" class="btn btn-primary">Acessar Demonstração</a>
+                <a href="#contato" class="btn btn-secondary">Solicitar Visita Técnica</a>
             </div>
         </div>
     </section>
 
-    <!-- Seção Sobre Ampliada -->
-    <section id="sobre" class="container section-padding">
-        <div class="grid-2">
-            <div>
-                <h2>Cultivando Conhecimento de Ponta</h2>
-                <p class="highlight-text">A agricultura moderna integra ecossistemas vivos a algoritmos preditivos para garantir a segurança alimentar global.</p>
-                <p>Nosso foco principal está na regeneração do solo. Através do plantio direto, rotação de culturas e eliminação de defensivos químicos pesados, conseguimos manter a terra produtiva por gerações, reduzindo drasticamente os custos operacionais do produtor.</p>
-                <p>Seja você um pequeno agricultor familiar ou um grande gestor de frotas agrícolas, a transição para o modelo sustentável melhora suas margens de lucro e abre portas para o mercado internacional de créditos de carbono.</p>
-            </div>
-            <div class="sobre-img-box">
-                <img src="https://unsplash.com" alt="Campo cultivado verde com tecnologia de precisão">
-            </div>
-        </div>
-    </section>
-
-    <!-- Seção de Tecnologias Detalhada -->
-    <section id="tecnologias" class="bg-light section-padding">
+    <!-- Seção Inédita: Painel Interativo de Demonstração (Dashboard) -->
+    <section id="dashboard" class="section-padding bg-light">
         <div class="container">
-            <h2 class="text-center">Inovações de Precisão no Campo</h2>
-            <div class="grid-3">
-                <div class="card">
-                    <div class="card-icon">🌱</div>
-                    <h3>Nutrição Regenerativa</h3>
-                    <p>Substituição de fertilizantes sintéticos por bioinsumos desenvolvidos a partir de microrganismos locais, devolvendo a vida microbiana e a resiliência natural ao solo cultivável.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">💧</div>
-                    <h3>Gotejamento Subterrâneo</h3>
-                    <p>Sistemas automatizados que aplicam água e nutrientes diretamente nas raízes das plantas. Evita completamente a evaporação superficial e reduz o consumo elétrico de bombeamento.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🛰️</div>
-                    <h3>Telemetria & IA</h3>
-                    <p>Drones equipados com sensores multiespectrais que geram mapas de calor. Permitem identificar estresse hídrico, focos isolados de pragas e calcular linhas exatas de colheita.</p>
-                </div>
+            <div class="section-header">
+                <h2>Painel Operacional AgroAI</h2>
+                <p>Veja como nossa inteligência artificial exibe os dados de uma fazenda conectada em tempo real.</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Seção Inédita: Calendário de Cultivo -->
-    <section id="calendario" class="container section-padding">
-        <h2 class="text-center">Calendário de Manejo Ideal</h2>
-        <p class="text-center sub-text">Acompanhe as melhores épocas para as principais culturas da safra nacional:</p>
-        <div class="table-responsive">
-            <table class="agro-table">
-                <thead>
-                    <tr>
-                        <th>Cultura</th>
-                        <th>Período de Plantio</th>
-                        <th>Período de Colheita</th>
-                        <th>Exigência Hídrica</th>
-                        <th>Técnica Recomendada</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Soja</strong></td>
-                        <td>Outubro a Dezembro</td>
-                        <td>Fevereiro a Abril</td>
-                        <td>Moderada a Alta</td>
-                        <td>Plantio Direto na Palha</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Milho Safrinha</strong></td>
-                        <td>Janeiro a Março</td>
-                        <td>Junho a Agosto</td>
-                        <td>Moderada</td>
-                        <td>Consórcio com Braquiária</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Feijão</strong></td>
-                        <td>Setembro a Novembro</td>
-                        <td>Dezembro a Fevereiro</td>
-                        <td>Baixa a Moderada</td>
-                        <td>Irrigação Inteligente por Microaspersão</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- Seção Inédita: Calculadora Interativa -->
-    <section id="calculadora" class="bg-green-light section-padding">
-        <div class="container max-width-600">
-            <h2 class="text-center">Simulador de Economia Hídrica</h2>
-            <p class="text-center">Descubra quantos litros de água sua fazenda pode economizar migrando do método tradicional de manejo para a irrigação inteligente por gotejamento.</p>
             
-            <div class="calc-box">
-                <div class="form-group">
-                    <label for="hectares">Tamanho da área cultivada (em Hectares):</label>
-                    <input type="number" id="hectares" min="1" placeholder="Ex: 10" value="5">
+            <div class="dashboard-grid">
+                <!-- Card 1: Status Solo -->
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <i class="fa-solid fa-seedling text-primary"></i>
+                        <h3>Umidade do Solo</h3>
+                    </div>
+                    <div class="dash-value">64%</div>
+                    <div class="progress-bar"><div class="progress-fill" style="width: 64%;"></div></div>
+                    <p class="dash-status status-success"><i class="fa-solid fa-circle-check"></i> Solo em faixa ideal</p>
                 </div>
-                <button id="btnCalcular" class="btn btn-full">Calcular Impacto</button>
-                
-                <div id="resultadoCalc" class="resultado-box hidden">
-                    <h4>Resultado Estimado do Seu Manejo:</h4>
-                    <p>Economia Diária de Água: <strong id="resAgua">0</strong> Litros</p>
-                    <p>Redução Estimada de Custo Energético: <strong id="resEnergia">0</strong>%</p>
-                    <p class="nota">*Cálculo baseado na média padrão de economia de 40% em sistemas automatizados.</p>
+
+                <!-- Card 2: Nitrogênio / Fósforo -->
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <i class="fa-solid fa-flask text-warning"></i>
+                        <h3>Índice NPK</h3>
+                    </div>
+                    <div class="dash-value">Estável</div>
+                    <div class="nutrient-indicators">
+                        <span>N: <strong>Alto</strong></span>
+                        <span>P: <strong>Médio</strong></span>
+                        <span>K: <strong>Ideal</strong></span>
+                    </div>
+                    <p class="dash-status status-success"><i class="fa-solid fa-circle-check"></i> Sem necessidade de fertilização</p>
+                </div>
+
+                <!-- Card 3: Alerta de Pragas -->
+                <div class="dash-card">
+                    <div class="dash-card-header">
+                        <i class="fa-solid fa-bug text-danger"></i>
+                        <h3>Focos de Infestação</h3>
+                    </div>
+                    <div class="dash-value-alert">02 <span class="unit">focos</span></div>
+                    <p class="dash-status status-alert"><i class="fa-solid fa-triangle-exclamation"></i> Drone detectou anomalias no Talhão 4</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Inédita: Blog / Notícias -->
-    <section id="blog" class="container section-padding">
-        <h2 class="text-center">Atualizações do Mercado Agro</h2>
-        <div class="grid-3">
-            <div class="blog-card">
-                <div class="blog-img">
-                    <img src="https://unsplash.com" alt="Trator tecnológico">
+    <!-- Seção Clima Integrada -->
+    <section id="clima" class="section-padding">
+        <div class="container grid-2">
+            <div>
+                <h2>Previsão Agroclimática</h2>
+                <p>Condições ideais de pulverização e janela de colheita calculadas de acordo com as variáveis meteorológicas da sua região.</p>
+                <div class="weather-box">
+                    <div class="weather-main">
+                        <i class="fa-solid fa-cloud-sun weather-icon"></i>
+                        <div>
+                            <span class="temp">27°C</span>
+                            <p>Ensolarado com nuvens</p>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="w-detail"><i class="fa-solid fa-wind"></i> Vento: <strong>12 km/h</strong></div>
+                        <div class="w-detail"><i class="fa-solid fa-droplet"></i> Chuva: <strong>5% prob.</strong></div>
+                        <div class="w-detail"><i class="fa-solid fa-sun"></i> Índice UV: <strong>Alto (7)</strong></div>
+                    </div>
                 </div>
-                <div class="blog-content">
-                    <span class="blog-date">30 Julho, 2026</span>
-                    <h3>Como a Inteligência Artificial prevê quebras de safra</h3>
-                    <p>Modelos matemáticos alimentados por satélites conseguem mitigar riscos climáticos antes do plantio...</p>
-                    <a href="#" class="read-more">Ler Artigo &rarr;</a>
+                <p class="highlight-text text-success"><i class="fa-solid fa-circle-info"></i> Recomendações: Janela ideal para aplicação de biodefensivos nas próximas 6 horas.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://unsplash.com" alt="Monitoramento climático no smartphone">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Soluções Expandida -->
+    <section id="solucoes" class="section-padding bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossos Pilares Tecnológicos</h2>
+                <p>Implementamos tecnologia modular adaptada ao tamanho do seu agronegócio.</p>
+            </div>
+            <div class="grid-3">
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-satellite-dish"></i></div>
+                    <h3>Imagens de Satélite NDVI</h3>
+                    <p>Histórico completo de biomassa e vigor vegetativo. Identifique estresse hídrico ou nutricional semanas antes de se tornarem visíveis a olho nu.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-robot"></i></div>
+                    <h3>Automação de Frotas</h3>
+                    <p>Pilotos automáticos guiados por GPS centimétrico RTK para tratores e colheitadeiras, reduzindo amassamento de culturas e economizando combustível.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Manejo Biológico IP</h3>
+                    <p>Integração de sensores inteligentes com controle biológico de pragas, reduzindo a dependência química e valorizando o preço final do seu grão.</p>
                 </div>
             </div>
-            <div class="blog-card">
-                <div class="blog-img">
-                    <img src="https://unsplash.com" alt="Horta orgânica">
-                </div>
-                <div class="blog-content">
-                    <span class="blog-date">24 Julho, 2026</span>
-                    <h3>O crescimento dos defensivos biológicos no Brasil</h3>
-                    <p>O mercado de bioinsumos registrou alta histórica impulsionado pela busca de certificações internacionais...</p>
-                    <a href="#" class="read-more">Ler Artigo &rarr;</a>
-                </div>
+        </div>
+    </section>
+
+    <!-- Formulário Premium de Contato -->
+    <section id="contato" class="section-padding">
+        <div class="container max-width-600">
+            <div class="section-header">
+                <h2>Transforme Sua Produtividade</h2>
+                <p>Preencha os dados abaixo. Um engenheiro agrônomo especialista na sua cultura entrará em contato.</p>
             </div>
-            <div class="blog-card">
-                <div class="blog-img">
-                    <img src="https://unsplash.com" alt="Análise de solo">
+            <form class="contact-form" id="agroTechForm">
+                <div class="input-group">
+                    <label for="nome"><i class="fa-solid fa-user"></i> Nome Completo</label>
+                    <input type="text" id="nome" required placeholder="Ex: João Silva">
                 </div>
-                <div class="blog-content">
-                    <span class="blog-date">15 Julho, 2026</span>
-                    <h3>Análise de macronutrientes via sensores de solo</h3>
+                <div class="input-group">
+                    <label for="email"><i class="fa-solid fa-envelope"></i> E-mail Corporativo</label>
+                    <input type="email" id="email" required placeholder="joao@fazenda.com.br">
+                </div>
+                <div class="input-group">
+                    <label for="cultura"><i class="fa-solid fa-wheat-awn"></i> Principal Cultura</label>
+                    <select id="cultura">
+                        <option value="soja">Soja</option>
+                        <option value="milho">Milho</option>
+                        <option value="cafe">Café</option>
+                        <option value="pecuaria">Pecuária / Pastagem</option>
+                        <option value="outros">Outros</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="mensagem"><i class="fa-solid fa-comment-dots"></i> Descreva seu Desafio</label>
+                    <textarea id="mensagem" rows="4" required placeholder="Ex: Desejo reduzir custos com irrigação ou pragas no milho..."></textarea>
+                </div>
