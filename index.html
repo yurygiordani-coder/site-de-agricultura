@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroAI | Inteligência e Monitoramento de Precisão</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Ícones externos para um design profissional -->
+    <!-- Ícones externos para o design -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
@@ -41,8 +41,8 @@
         </div>
     </header>
 
-    <!-- Seção Hero (Nota: A imagem de fundo agora está configurada diretamente aqui para garantir o funcionamento) -->
-    <section id="home" class="hero" style="background: linear-gradient(rgba(17, 38, 18, 0.75), rgba(17, 38, 18, 0.4)), url('https://unsplash.com') no-repeat center center/cover;">
+    <!-- Seção Hero com Fundo SVG Nativo Garantido -->
+    <section id="home" class="hero" style="background: linear-gradient(rgba(17, 38, 18, 0.85), rgba(17, 38, 18, 0.6)), url('data:image/svg+xml;utf8,<svg xmlns=%22http://w3.org width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%232e7d32%22/><path d=%22M0,100 Q25,70 50,100 T100,100 Z%22 fill=%22%231b5e20%22 opacity=%220.5%22/><path d=%22M0,100 Q30,50 70,100 T100,100 Z%22 fill=%22%2381c784%22 opacity=%220.2%22/></svg>') center/cover;">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <span class="badge">Agricultura 5.0</span>
@@ -50,7 +50,7 @@
             <p>Monitore suas lavouras por satélite, automatize sua irrigação e reduza custos operacionais em até 35% com nosso ecossistema integrado.</p>
             <div class="hero-buttons">
                 <a href="#dashboard" class="btn btn-primary">Acessar Demonstração</a>
-                <a href="#contato" class="btn btn-secondary">Solicitar Visita Técnico</a>
+                <a href="#contato" class="btn btn-secondary">Solicitar Visita Técnica</a>
             </div>
         </div>
     </section>
@@ -126,13 +126,26 @@
                 <p class="highlight-text text-success"><i class="fa-solid fa-circle-info"></i> Recomendações: Janela ideal para aplicação de biodefensivos nas próximas 6 horas.</p>
             </div>
             <div class="image-wrapper">
-                <!-- IMAGEM CORRIGIDA: Smartphone mostrando dados no campo -->
-                <img src="https://unsplash.com" alt="Monitoramento tecnológico agrícola no campo">
+                <!-- ILUSTRAÇÃO SVG INFALÍVEL: Gráfico de Clima e Plantação Tecnológica -->
+                <svg viewBox="0 0 500 400" width="100%" height="100%" style="background:#e8f5e9; border-radius:12px; border: 2px solid #a5d6a7;">
+                    <!-- Sol de fundo -->
+                    <circle cx="400" cy="100" r="40" fill="#ffb74d" opacity="0.6"/>
+                    <!-- Linhas de dados / Tecnologia -->
+                    <path d="M 50 300 L 150 220 L 250 260 L 350 140 L 450 180" fill="none" stroke="#2e7d32" stroke-width="4" stroke-dasharray="5"/>
+                    <circle cx="350" cy="140" r="8" fill="#1b5e20"/>
+                    <text x="365" y="145" font-family="sans-serif" font-weight="bold" fill="#1b5e20">Pico de Safra</text>
+                    <!-- Montanhas / Solo cultivado -->
+                    <path d="M 0 400 L 120 280 L 280 350 L 500 250 L 500 400 Z" fill="#c8e6c9"/>
+                    <path d="M 0 400 L 200 320 L 400 380 L 500 330 L 500 400 Z" fill="#81c784" opacity="0.7"/>
+                    <!-- Folhas simbolizando cultivo -->
+                    <path d="M 80 320 Q 90 290 110 290 Q 100 310 80 320" fill="#2e7d32"/>
+                    <path d="M 220 340 Q 230 310 250 310 Q 240 330 220 340" fill="#1b5e20"/>
+                </svg>
             </div>
         </div>
     </section>
 
-    <!-- Seção Soluções Expandida -->
+    <!-- Seção Soluções -->
     <section id="solucoes" class="section-padding bg-light">
         <div class="container">
             <div class="section-header">
@@ -164,22 +177,3 @@
         <div class="container max-width-600">
             <div class="section-header">
                 <h2>Transforme Sua Produtividade</h2>
-                <p>Preencha os dados abaixo. Um engenheiro agrônomo especialista na sua cultura entrará em contato.</p>
-            </div>
-            <form class="contact-form" id="agroTechForm">
-                <div class="input-group">
-                    <label for="nome"><i class="fa-solid fa-user"></i> Nome Completo</label>
-                    <input type="text" id="nome" required placeholder="Ex: João Silva">
-                </div>
-                <div class="input-group">
-                    <label for="email"><i class="fa-solid fa-envelope"></i> E-mail Corporativo</label>
-                    <input type="email" id="email" required placeholder="joao@fazenda.com.br">
-                </div>
-                <div class="input-group">
-                    <label for="cultura"><i class="fa-solid fa-wheat-awn"></i> Principal Cultura</label>
-                    <select id="cultura">
-                        <option value="soja">Soja</option>
-                        <option value="milho">Milho</option>
-                        <option value="cafe">Café</option>
-                        <option value="pecuaria">Pecuária / Pastagem</option>
-                        <option value="outros">Outros</option>
