@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroFuturo | Agricultura Sustentável</title>
+    <title>AgroFuturo | Portal de Agricultura Avançada</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Cabeçalho e Menu de Navegação -->
+    <!-- Cabeçalho e Menu -->
     <header>
         <div class="container header-flex">
             <div class="logo">
@@ -17,87 +17,182 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="#home">Início</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#tecnologias">Tecnologias</a></li>
+                    <li><a href="#calendario">Calendário</a></li>
+                    <li><a href="#calculadora">Simulador</a></li>
+                    <li><a href="#blog">Notícias</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Seção Principal (Hero) -->
+    <!-- Seção Hero -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h2>O Futuro da Agricultura é Sustentável</h2>
-            <p>Unindo tecnologia avançada e respeito ao meio ambiente para alimentar o mundo de forma consciente.</p>
-            <a href="#tecnologias" class="btn">Conhecer Soluções</a>
+            <p>Unindo inteligência artificial, dados climáticos e respeito ao meio ambiente para alimentar o mundo de forma consciente.</p>
+            <a href="#tecnologias" class="btn">Explorar Inovações</a>
         </div>
     </section>
 
-    <!-- Seção Sobre a Agricultura -->
+    <!-- Seção de Dados e Números -->
+    <section class="bg-dark text-white section-padding">
+        <div class="container grid-4 text-center">
+            <div class="stat-item">
+                <span class="stat-number">+40%</span>
+                <p>De eficiência no uso de recursos hídricos</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">25t</span>
+                <p>Evitadas de CO₂ com manejo biológico</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <p>Rastreabilidade do campo à mesa</p>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">+15k</span>
+                <p>Hectares monitorados por nossa tecnologia</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sobre Ampliada -->
     <section id="sobre" class="container section-padding">
         <div class="grid-2">
             <div>
-                <h2>Cultivando Conhecimento</h2>
-                <p>A agricultura moderna vai muito além do plantio tradicional. Hoje, ela integra dados, preservação de ecossistemas e eficiência hídrica para garantir a segurança alimentar global.</p>
-                <p>Nosso foco está na disseminação de práticas que reduzem o impacto ambiental, protegem o solo e aumentam a produtividade dos pequenos aos grandes produtores rurais.</p>
+                <h2>Cultivando Conhecimento de Ponta</h2>
+                <p class="highlight-text">A agricultura moderna integra ecossistemas vivos a algoritmos preditivos para garantir a segurança alimentar global.</p>
+                <p>Nosso foco principal está na regeneração do solo. Através do plantio direto, rotação de culturas e eliminação de defensivos químicos pesados, conseguimos manter a terra produtiva por gerações, reduzindo drasticamente os custos operacionais do produtor.</p>
+                <p>Seja você um pequeno agricultor familiar ou um grande gestor de frotas agrícolas, a transição para o modelo sustentável melhora suas margens de lucro e abre portas para o mercado internacional de créditos de carbono.</p>
             </div>
             <div class="sobre-img-box">
-                <!-- Imagem ilustrativa via URL pública unspash -->
-                <img src="https://unsplash.com" alt="Campo cultivado verde tecnológico">
+                <img src="https://unsplash.com" alt="Campo cultivado verde com tecnologia de precisão">
             </div>
         </div>
     </section>
 
-    <!-- Seção de Pilares / Tecnologias -->
+    <!-- Seção de Tecnologias Detalhada -->
     <section id="tecnologias" class="bg-light section-padding">
         <div class="container">
-            <h2 class="text-center">Inovações no Campo</h2>
+            <h2 class="text-center">Inovações de Precisão no Campo</h2>
             <div class="grid-3">
                 <div class="card">
                     <div class="card-icon">🌱</div>
-                    <h3>Cultivos Orgânicos</h3>
-                    <p>Produção livre de defensivos químicos agressivos, priorizando a saúde do consumidor e a regeneração biológica da terra.</p>
+                    <h3>Nutrição Regenerativa</h3>
+                    <p>Substituição de fertilizantes sintéticos por bioinsumos desenvolvidos a partir de microrganismos locais, devolvendo a vida microbiana e a resiliência natural ao solo cultivável.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon">💧</div>
-                    <h3>Irrigação Inteligente</h3>
-                    <p>Sistemas automatizados guiados por sensores de umidade que evitam o desperdício e economizam até 40% de água.</p>
+                    <h3>Gotejamento Subterrâneo</h3>
+                    <p>Sistemas automatizados que aplicam água e nutrientes diretamente nas raízes das plantas. Evita completamente a evaporação superficial e reduz o consumo elétrico de bombeamento.</p>
                 </div>
                 <div class="card">
                     <div class="card-icon">🛰️</div>
-                    <h3>Monitoramento Drone</h3>
-                    <p>Mapeamento aéreo em tempo real para detectar pragas, falhas de plantio e acompanhar a saúde geral da lavoura.</p>
+                    <h3>Telemetria & IA</h3>
+                    <p>Drones equipados com sensores multiespectrais que geram mapas de calor. Permitem identificar estresse hídrico, focos isolados de pragas e calcular linhas exatas de colheita.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Contato -->
-    <section id="contato" class="container section-padding">
-        <h2 class="text-center">Fale Conosco</h2>
-        <p class="text-center sub-contato">Tem dúvidas sobre implementação de tecnologias agrícolas? Envie uma mensagem!</p>
-        <form class="form-contato" id="agroForm">
-            <input type="text" id="nome" placeholder="Seu Nome" required>
-            <input type="email" id="email" placeholder="Seu E-mail" required>
-            <textarea id="mensagem" rows="5" placeholder="Como podemos ajudar no seu cultivo?" required></textarea>
-            <button type="submit" class="btn">Enviar Mensagem</button>
-        </form>
+    <!-- Seção Inédita: Calendário de Cultivo -->
+    <section id="calendario" class="container section-padding">
+        <h2 class="text-center">Calendário de Manejo Ideal</h2>
+        <p class="text-center sub-text">Acompanhe as melhores épocas para as principais culturas da safra nacional:</p>
+        <div class="table-responsive">
+            <table class="agro-table">
+                <thead>
+                    <tr>
+                        <th>Cultura</th>
+                        <th>Período de Plantio</th>
+                        <th>Período de Colheita</th>
+                        <th>Exigência Hídrica</th>
+                        <th>Técnica Recomendada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Soja</strong></td>
+                        <td>Outubro a Dezembro</td>
+                        <td>Fevereiro a Abril</td>
+                        <td>Moderada a Alta</td>
+                        <td>Plantio Direto na Palha</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Milho Safrinha</strong></td>
+                        <td>Janeiro a Março</td>
+                        <td>Junho a Agosto</td>
+                        <td>Moderada</td>
+                        <td>Consórcio com Braquiária</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Feijão</strong></td>
+                        <td>Setembro a Novembro</td>
+                        <td>Dezembro a Fevereiro</td>
+                        <td>Baixa a Moderada</td>
+                        <td>Irrigação Inteligente por Microaspersão</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
-    <!-- Rodapé -->
-    <footer>
-        <p>&copy; 2026 AgroFuturo. Todos os direitos reservados. Cultivando um amanhã melhor.</p>
-    </footer>
+    <!-- Seção Inédita: Calculadora Interativa -->
+    <section id="calculadora" class="bg-green-light section-padding">
+        <div class="container max-width-600">
+            <h2 class="text-center">Simulador de Economia Hídrica</h2>
+            <p class="text-center">Descubra quantos litros de água sua fazenda pode economizar migrando do método tradicional de manejo para a irrigação inteligente por gotejamento.</p>
+            
+            <div class="calc-box">
+                <div class="form-group">
+                    <label for="hectares">Tamanho da área cultivada (em Hectares):</label>
+                    <input type="number" id="hectares" min="1" placeholder="Ex: 10" value="5">
+                </div>
+                <button id="btnCalcular" class="btn btn-full">Calcular Impacto</button>
+                
+                <div id="resultadoCalc" class="resultado-box hidden">
+                    <h4>Resultado Estimado do Seu Manejo:</h4>
+                    <p>Economia Diária de Água: <strong id="resAgua">0</strong> Litros</p>
+                    <p>Redução Estimada de Custo Energético: <strong id="resEnergia">0</strong>%</p>
+                    <p class="nota">*Cálculo baseado na média padrão de economia de 40% em sistemas automatizados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Script para Interatividade Simples -->
-    <script>
-        document.getElementById('agroForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const nome = document.getElementById('nome').value;
-            alert(`Obrigado pelo contato, ${nome}! Nossa equipe responderá em breve.`);
-            this.reset();
-        });
-    </script>
-</body>
-</html>
+    <!-- Seção Inédita: Blog / Notícias -->
+    <section id="blog" class="container section-padding">
+        <h2 class="text-center">Atualizações do Mercado Agro</h2>
+        <div class="grid-3">
+            <div class="blog-card">
+                <div class="blog-img">
+                    <img src="https://unsplash.com" alt="Trator tecnológico">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date">30 Julho, 2026</span>
+                    <h3>Como a Inteligência Artificial prevê quebras de safra</h3>
+                    <p>Modelos matemáticos alimentados por satélites conseguem mitigar riscos climáticos antes do plantio...</p>
+                    <a href="#" class="read-more">Ler Artigo &rarr;</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img">
+                    <img src="https://unsplash.com" alt="Horta orgânica">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date">24 Julho, 2026</span>
+                    <h3>O crescimento dos defensivos biológicos no Brasil</h3>
+                    <p>O mercado de bioinsumos registrou alta histórica impulsionado pela busca de certificações internacionais...</p>
+                    <a href="#" class="read-more">Ler Artigo &rarr;</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img">
+                    <img src="https://unsplash.com" alt="Análise de solo">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-date">15 Julho, 2026</span>
+                    <h3>Análise de macronutrientes via sensores de solo</h3>
