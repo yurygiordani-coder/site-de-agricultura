@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroFuturo | Agricultura Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho e Menu de Navegação -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo">
+                <h1>Agro<span>Futuro</span></h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Principal (Hero) -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>O Futuro da Agricultura é Sustentável</h2>
+            <p>Unindo tecnologia avançada e respeito ao meio ambiente para alimentar o mundo de forma consciente.</p>
+            <a href="#tecnologias" class="btn">Conhecer Soluções</a>
+        </div>
+    </section>
+
+    <!-- Seção Sobre a Agricultura -->
+    <section id="sobre" class="container section-padding">
+        <div class="grid-2">
+            <div>
+                <h2>Cultivando Conhecimento</h2>
+                <p>A agricultura moderna vai muito além do plantio tradicional. Hoje, ela integra dados, preservação de ecossistemas e eficiência hídrica para garantir a segurança alimentar global.</p>
+                <p>Nosso foco está na disseminação de práticas que reduzem o impacto ambiental, protegem o solo e aumentam a produtividade dos pequenos aos grandes produtores rurais.</p>
+            </div>
+            <div class="sobre-img-box">
+                <!-- Imagem ilustrativa via URL pública unspash -->
+                <img src="https://unsplash.com" alt="Campo cultivado verde tecnológico">
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Pilares / Tecnologias -->
+    <section id="tecnologias" class="bg-light section-padding">
+        <div class="container">
+            <h2 class="text-center">Inovações no Campo</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="card-icon">🌱</div>
+                    <h3>Cultivos Orgânicos</h3>
+                    <p>Produção livre de defensivos químicos agressivos, priorizando a saúde do consumidor e a regeneração biológica da terra.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💧</div>
+                    <h3>Irrigação Inteligente</h3>
+                    <p>Sistemas automatizados guiados por sensores de umidade que evitam o desperdício e economizam até 40% de água.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛰️</div>
+                    <h3>Monitoramento Drone</h3>
+                    <p>Mapeamento aéreo em tempo real para detectar pragas, falhas de plantio e acompanhar a saúde geral da lavoura.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="container section-padding">
+        <h2 class="text-center">Fale Conosco</h2>
+        <p class="text-center sub-contato">Tem dúvidas sobre implementação de tecnologias agrícolas? Envie uma mensagem!</p>
+        <form class="form-contato" id="agroForm">
+            <input type="text" id="nome" placeholder="Seu Nome" required>
+            <input type="email" id="email" placeholder="Seu E-mail" required>
+            <textarea id="mensagem" rows="5" placeholder="Como podemos ajudar no seu cultivo?" required></textarea>
+            <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2026 AgroFuturo. Todos os direitos reservados. Cultivando um amanhã melhor.</p>
+    </footer>
+
+    <!-- Script para Interatividade Simples -->
+    <script>
+        document.getElementById('agroForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value;
+            alert(`Obrigado pelo contato, ${nome}! Nossa equipe responderá em breve.`);
+            this.reset();
+        });
+    </script>
+</body>
+</html>
