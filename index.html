@@ -41,8 +41,8 @@
         </div>
     </header>
 
-    <!-- Seção Hero -->
-    <section id="home" class="hero">
+    <!-- Seção Hero (Nota: A imagem de fundo agora está configurada diretamente aqui para garantir o funcionamento) -->
+    <section id="home" class="hero" style="background: linear-gradient(rgba(17, 38, 18, 0.75), rgba(17, 38, 18, 0.4)), url('https://unsplash.com') no-repeat center center/cover;">
         <div class="hero-overlay"></div>
         <div class="container hero-content">
             <span class="badge">Agricultura 5.0</span>
@@ -50,12 +50,12 @@
             <p>Monitore suas lavouras por satélite, automatize sua irrigação e reduza custos operacionais em até 35% com nosso ecossistema integrado.</p>
             <div class="hero-buttons">
                 <a href="#dashboard" class="btn btn-primary">Acessar Demonstração</a>
-                <a href="#contato" class="btn btn-secondary">Solicitar Visita Técnica</a>
+                <a href="#contato" class="btn btn-secondary">Solicitar Visita Técnico</a>
             </div>
         </div>
     </section>
 
-    <!-- Seção Inédita: Painel Interativo de Demonstração (Dashboard) -->
+    <!-- Seção Painel Interativo (Dashboard) -->
     <section id="dashboard" class="section-padding bg-light">
         <div class="container">
             <div class="section-header">
@@ -126,7 +126,8 @@
                 <p class="highlight-text text-success"><i class="fa-solid fa-circle-info"></i> Recomendações: Janela ideal para aplicação de biodefensivos nas próximas 6 horas.</p>
             </div>
             <div class="image-wrapper">
-                <img src="https://unsplash.com" alt="Monitoramento climático no smartphone">
+                <!-- IMAGEM CORRIGIDA: Smartphone mostrando dados no campo -->
+                <img src="https://unsplash.com" alt="Monitoramento tecnológico agrícola no campo">
             </div>
         </div>
     </section>
@@ -182,9 +183,3 @@
                         <option value="cafe">Café</option>
                         <option value="pecuaria">Pecuária / Pastagem</option>
                         <option value="outros">Outros</option>
-                    </select>
-                </div>
-                <div class="input-group">
-                    <label for="mensagem"><i class="fa-solid fa-comment-dots"></i> Descreva seu Desafio</label>
-                    <textarea id="mensagem" rows="4" required placeholder="Ex: Desejo reduzir custos com irrigação ou pragas no milho..."></textarea>
-                </div>
